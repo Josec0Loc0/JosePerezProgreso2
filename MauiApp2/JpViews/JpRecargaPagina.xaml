@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Progreso2JosePerez.JpViews.JpRecargaPagina"
+             Title="JpRecargaPagina">
+    <StackLayout Padding="20" Spacing="10">
+        <Label x:Name="Jp_Label1" Text="Número de Teléfono" FontSize="20" />
+        <Entry x:Name="Jp_Entry1" Placeholder="Ingrese su número" Keyboard="Numeric" />
+        
+        <Label x:Name="Jp_Label2" Text="Nombre" FontSize="20" />
+        <Entry x:Name="Jp_Entry2" Placeholder="Ingrese su nombre" />
+        
+        <Button x:Name="Jp_Button1" Text="Realizar Recarga" Clicked="OnRecargarClicked" />
+        <Label x:Name="Jp_Label3" TextColor="Green" FontSize="18" />
+
+        <Label x:Name="Jp_Label4" Text="Última Recarga:" FontSize="20" />
+        <Label x:Name="Jp_Label5" FontSize="18" />
+    </StackLayout>
+
+</ContentPage>
