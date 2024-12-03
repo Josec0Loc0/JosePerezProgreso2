@@ -1,8 +1,9 @@
+
 namespace Progreso2JosePerez.JpViews;
 
 public partial class JpRecargaPagina : ContentPage
 {
-    private const string FileName = "JosePerez.txt";
+    private readonly string FilePath = Path.Combine(FileSystem.AppDataDirectory, "JosePerez.txt");
     public JpRecargaPagina()
     {
         InitializeComponent();
@@ -14,7 +15,6 @@ public partial class JpRecargaPagina : ContentPage
         string numero = Jp_Entry1.Text;
         string nombre = Jp_Entry2.Text;
 
-       
         if (string.IsNullOrEmpty(numero) || string.IsNullOrEmpty(nombre))
         {
             Jp_Label3.Text = "Por favor, complete todos los campos.";
@@ -22,33 +22,32 @@ public partial class JpRecargaPagina : ContentPage
             return;
         }
 
-      
-        var recarga = new Progreso2JosePerez.JpModels.RecargaJp
+        
+        var recarga = new JpModels.RecargaJp
         {
             Nombre = nombre,
             Numero = numero
         };
 
+        // Guardar la información en el archivo
+        File.WriteAllText(FilePath, recarga.ToString());
 
-        File.WriteAllText(FileName, recarga.ToString());
-
-        // Mostrar mensaje de éxito
         Jp_Label3.Text = "¡Recarga exitosa!";
         Jp_Label3.TextColor = Colors.Green;
 
-        
+      
         CargarUltimaRecarga();
 
-        // Limpiar formulario
+      
         Jp_Entry1.Text = string.Empty;
         Jp_Entry2.Text = string.Empty;
     }
 
     private void CargarUltimaRecarga()
     {
-        if (File.Exists(FileName))
+        if (File.Exists(FilePath))
         {
-            Jp_Label5.Text = File.ReadAllText(FileName);
+            Jp_Label5.Text = File.ReadAllText(FilePath);
         }
         else
         {
