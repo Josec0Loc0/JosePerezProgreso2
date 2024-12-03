@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\icon_personas.png" />
 	  <None Remove="Resources\Images\icon_recarga.png" />
 	</ItemGroup>
 
@@ -68,6 +69,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="JpViews\JpRecargaPagina.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="JpViews\JpSegundaPagina.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

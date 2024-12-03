@@ -6,8 +6,15 @@
     xmlns:local="clr-namespace:Progreso2JosePerez.JpViews"
     Shell.FlyoutBehavior="Disabled"
     Title="MauiApp2">
-    <TabBar Title="Recarga" Icon="icon_recarga.png">
-            
-            <ShellContent Title="Recarga" ContentTemplate="{DataTemplate local:JpRecargaPagina}" />
-        </TabBar>
+    <TabBar 
+        <Tab Title="Recarga" Icon="icon_recarga.png">
+        <ShellContent Title="Recarga" ContentTemplate="{DataTemplate local:JpRecargaPagina}" />
+        </Tab>
+        <Tab Title="Nombre" Icon="icon_personas.png">
+            <ShellContent Title="Recarga" ContentTemplate="{DataTemplate local:JpSegundaPagina}" />
+        </Tab>
+
+
+    </TabBar>
+    
 </Shell>

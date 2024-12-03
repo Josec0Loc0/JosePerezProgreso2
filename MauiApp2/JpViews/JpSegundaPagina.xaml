@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Progreso2JosePerez.JpViews.JpSegundaPagina"
+             Title="JpSegundaPagina">
+    <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *" Padding="20">
+        
+        <Label Grid.Row="0" Grid.Column="0" Text="José" FontSize="24" HorizontalOptions="Center" />
+        <Label Grid.Row="0" Grid.Column="1" Text="Ernesto" FontSize="24" HorizontalOptions="Center" />
+
+        
+        <Label Grid.Row="1" Grid.Column="0" Text="Perez" FontSize="24" HorizontalOptions="Center" Style="{StaticResource ApellidoStyle}" />
+        <Label Grid.Row="1" Grid.Column="1" Text="Tapia" FontSize="24" HorizontalOptions="Center" Style="{StaticResource ApellidoStyle}" />
+    </Grid>
+
+</ContentPage>
